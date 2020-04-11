@@ -35,6 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+define( 'WP_PLUGIN_BOILERPLATE_DOMAIN', 'wp-plugin-boilerplate' );
 define( 'WP_PLUGIN_BOILERPLATE_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
 define( 'WP_PLUGIN_BOILERPLATE_PATH', dirname(__FILE__) );
 define( 'WP_PLUGIN_BOILERPLATE_VERSION', '1.0.0' );
