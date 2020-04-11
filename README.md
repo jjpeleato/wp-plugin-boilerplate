@@ -2,7 +2,15 @@
 
 A base repository for building high-quality WordPress Plugins.
 
-## Project
+### License
+
+The WordPress Plugin Boilerplate is licensed under the GPL v2 or later.
+
+> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+A copy of the license is included in the root of the plugin’s directory. The file is named `LICENSE`.
+
+### Project
 
 ~
 
@@ -15,10 +23,6 @@ A base repository for building high-quality WordPress Plugins.
 ~
 
 ### Installing
-
-~
-
-### Developing with NPM or Yarn, Gulp. PHP_CodeSniffer and Deployer
 
 ~
 
