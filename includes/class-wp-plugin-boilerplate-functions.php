@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * The functions class.
  *
  * @package     WP_Plugin_Boilerplate
- * @subpackage  WP_Plugin_Boilerplate_Cli/includes
+ * @subpackage  WP_Plugin_Boilerplate/includes
  * @author      Your Name <jjpeleato@example.com>
  * @link        http://example.com/
  * @copyright   2XXX Your Name or Company Name

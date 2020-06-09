@@ -21,7 +21,7 @@ if ( ! defined( 'WP_CLI' ) ) {
  * WP-CLI commands for WordPress Plugin Boilerplate.
  *
  * @package     WP_Plugin_Boilerplate
- * @subpackage  WP_Plugin_Boilerplate_Cli/includes
+ * @subpackage  WP_Plugin_Boilerplate/includes
  * @author      Your Name <jjpeleato@example.com>
  * @link        http://example.com/
  * @copyright   2XXX Your Name or Company Name
@@ -89,4 +89,4 @@ class WP_Plugin_Boilerplate_Cli extends \WP_CLI_Command
     }
 }
 
-WP_CLI::add_command('wp-plugin-boilerplate', 'WP_Plugin_Boilerplate_Cli');
+WP_CLI::add_command(WP_PLUGIN_BOILERPLATE_MACHINE_NAME, 'WP_Plugin_Boilerplate_Cli');

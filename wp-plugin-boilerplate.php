@@ -47,7 +47,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 define('WP_PLUGIN_BOILERPLATE_VERSION', '0.1.0');
 define('WP_PLUGIN_BOILERPLATE_MINIMUM_WP_VERSION', '5.4.1');
-define('WP_PLUGIN_BOILERPLATE_NAME', '_wp_plugin_boilerplate');
+define('WP_PLUGIN_BOILERPLATE_NAME', 'WordPress Plugin Boilerplate');
+define('WP_PLUGIN_BOILERPLATE_MACHINE_NAME', 'WP_Plugin_Boilerplate');
 define('WP_PLUGIN_BOILERPLATE_DOMAIN', 'wp-plugin-boilerplate');
 define('WP_PLUGIN_BOILERPLATE_URL', untrailingslashit(plugins_url('',__FILE__)));
 define('WP_PLUGIN_BOILERPLATE_PATH', untrailingslashit(plugin_dir_path(__FILE__)));
@@ -66,12 +67,35 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 }
 
 /**
- * Instantiates the WP_Plugin_Boilerplate_Admin class and registry install/uninstall hooks.
+ * The code that runs during plugin activation.
+ * This action is documented in includes/class-wp-plugin-boilerplate-install.php
+ */
+if ( ! function_exists( 'wp_plugin_boilerplate_install' ) ) {
+	function wp_plugin_boilerplate_install() {
+		require_once WP_PLUGIN_BOILERPLATE_PATH . '/includes/class-wp-plugin-boilerplate-install.php';
+		WP_Plugin_Boilerplate_Install::activate();
+	}
+}
+
+/**
+ * The code that runs during plugin deactivation.
+ * This action is documented in includes/class-wp-plugin-boilerplate-uninstall.php
+ */
+if ( ! function_exists( 'wp_plugin_boilerplate_uninstall' ) ) {
+	function wp_plugin_boilerplate_uninstall() {
+		require_once WP_PLUGIN_BOILERPLATE_PATH . '/includes/class-wp-plugin-boilerplate-uninstall.php';
+		WP_Plugin_Boilerplate_Uninstall::deactivate();
+	}
+}
+
+/**
+ * Initialize the WP_Plugin_Boilerplate_Admin class and registry install/uninstall hooks.
  */
 if ( ! function_exists( 'wp_plugin_boilerplate_run' ) ) {
 	function wp_plugin_boilerplate_run()
 	{
-		// Doing
+		register_activation_hook(WP_PLUGIN_BOILERPLATE_PATH_FILE, 'wp_plugin_boilerplate_install');
+		register_deactivation_hook(WP_PLUGIN_BOILERPLATE_PATH_FILE, 'wp_plugin_boilerplate_uninstall');
 	}
 }
 
