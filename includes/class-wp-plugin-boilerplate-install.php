@@ -34,8 +34,8 @@ class WP_Plugin_Boilerplate_Install
         /* Do nothing here */
     }
 
-	/**
-	 * Short Description. (use period)
+    /**
+	 * Short Description.
 	 *
 	 * Long Description.
 	 *

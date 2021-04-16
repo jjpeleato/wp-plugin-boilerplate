@@ -1,0 +1,32 @@
+{
+    "name": "jjpeleato/wp-plugin-boilerplate",
+    "description": "A base repository for building high-quality WordPress Plugins. ",
+    "keywords": ["WordPress", "plugin", "wp-coding-standards", "psr1"],
+    "homepage": "https://github.com/jjpeleato/wp-plugin-boilerplate.git",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "José J. Peleato Pradel",
+            "homepage": "https://www.jjpeleato.com/"
+		}
+    ],
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "roave/security-advisories": "dev-latest",
+        "squizlabs/php_codesniffer": "^3.6",
+        "wp-coding-standards/wpcs": "^2.3"
+    },
+    "config": {
+        "process-timeout" : 0,
+		"optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+		"cs": "phpcs",
+		"cs:fix": "phpcbf"
+	}
+}
